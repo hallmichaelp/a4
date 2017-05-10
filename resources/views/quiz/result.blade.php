@@ -8,7 +8,7 @@
 
 <aside>
   <h3>Results</h3>
-  <h5>You scored {{ $numanswerscorrect }} answers correct out of {{ $totalquestions }} total questions.</h5>
+  <h5>You scored {{ $numanswerscorrect }} correct answers out of {{ $totalquestions }} total questions.</h5>
 </aside>
 
 <table class="u-full-width">
