@@ -13,9 +13,6 @@ class QuizCreator
 
     private $difficulty;
     private $length;
-
-  // --
-
     private $questionSetFull = [];
     private $wrongAnswers = [];
     private $answerChoices = [];

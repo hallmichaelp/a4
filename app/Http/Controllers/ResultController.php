@@ -17,8 +17,6 @@ class ResultController extends Controller
       'countryids'=>$newQuizGrader->getCountryIds(),
       'numanswerscorrect'=>$newQuizGrader->getNumAnswersCorrect(),
       'countrydata'=>$newQuizGrader->getCountryData()
-      //'correctanswers'=>$result->getCorrectAnswers(),
-
     ]);
   }
 }

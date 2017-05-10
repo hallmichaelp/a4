@@ -48,17 +48,4 @@
 
        <!-- End of the Form -->
 
-       <!-- Need to delete this section -->
-         <p>Question Set Full</p>
-         <?php dump($questionsetfull); ?>
-         <p>Wrong Answers</p>
-         <?php dump($wronganswers); ?>
-         <p>Answer Choices</p>
-         <?php dump($answerchoices); ?>
-         <p>Difficulty Level</p>
-         <?php dump($difficulty); ?>
-         <p>Quiz ID</p>
-         <?php dump($quizid); ?>
-
-
 @endsection

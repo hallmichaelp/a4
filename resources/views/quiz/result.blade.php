@@ -37,21 +37,4 @@
   </div>
 </div>
 
-<!-- Need to delete this section -->
-  <p>Debugging Output Here</p>
-  <p>Answers Dump</p>
-    <?php dump($answers); ?>
-  <p>Total Questions Dump</p>
-    <?php dump($totalquestions); ?>
-    <p>Quiz ID</p>
-      <?php dump($quizid); ?>
-      <p>User Answers</p>
-        <?php dump($useranswers); ?>
-        <p>Country Ids</p>
-          <?php dump($countryids); ?>
-            <p>Number of Correct Answers</p>
-              <?php dump($numanswerscorrect); ?>
-              <p>Country Data</p>
-                <?php dump($countrydata); ?>
-
 @endsection
