@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class ConnectQuestionsAndQuizzesTables extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+      Schema::table('questions', function(Blueprint $table) {
+      // -- custom field to connect questions to quizzes
+        $table->integer('quiz_id')->unsigned();
+
+      // -- creating a foreign key relationship btw questions and quizzes
+        $table->foreign('quiz_id')->references('id')->on('quizzes');
+
+      });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+      Schema::table('questions', function(Blueprint $table) {
+        $table->dropForeign('questions_quiz_id_foreign');
+        $table->dropColumn('quiz_id');
+      });
+    }
+}

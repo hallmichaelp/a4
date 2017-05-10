@@ -1,0 +1,74 @@
+header {
+  margin: 20px 0px;
+  border-bottom: 1px solid black;
+}
+
+label {
+  display: inline-block;
+  width: 130px;
+  text-align: right;
+}
+
+input {
+  display: inline;
+  margin-left: 10px;
+}
+
+select {
+  display: inline;
+  margin-left: 10px;
+}
+
+form {
+  margin-top: 25px;
+  background-color: #F8F9F9;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  border: 1px solid #99A3A4;
+  border-radius: 7px;
+}
+
+.button-primary {
+  margin-left: 145px;
+  width: 150px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.extended {
+  width: 250px;
+}
+
+.questionLabel {
+  margin-left: 10px;
+  width: 175px;
+}
+
+.questionSelect {
+  width: 225px;
+}
+
+.questionRow {
+  margin: 0px 0px;
+}
+
+.hint {
+  margin-left: 0;
+}
+
+.button-extend {
+  margin-left: 200px;
+  margin-top: 15px;
+}
+
+.emphasis {
+  font-weight: bold;
+}
+
+.button-hint {
+  margin-left: 25px;
+}
