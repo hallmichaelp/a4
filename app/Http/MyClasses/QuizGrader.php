@@ -31,7 +31,7 @@ class QuizGrader
         $this->countryData = $this->setCountryData();
       }
 
-    // -- Getter methods to retrieve private variables
+    // -- Getter methods to retrieve private class properties
 
       public function getTotalQuestions() {
         return $this->totalQuestions;
@@ -57,6 +57,10 @@ class QuizGrader
         return $this->countryData;
       }
 
+      // -- Setter methods for establishing class properties
+
+      // -- Method pulls in the quiz ID from the form post data and saves it
+
       private function setQuizId() {
         array_shift($this->rawUserAnswers);
         $keyHolder = key($this->rawUserAnswers);
@@ -65,12 +69,16 @@ class QuizGrader
         return $quizId;
       }
 
+      // -- Method extracts only the user answers from the form post data
+
       private function setUserAnswers() {
 
         $onlyAnswers = array_values($this->rawUserAnswers);
         unset($onlyAnswers[0]);
         return $onlyAnswers;
       }
+
+      // -- Method extracts the country IDs from the form post data
 
       private function setCountryIds() {
         $countryIdBucket = [];
@@ -85,6 +93,8 @@ class QuizGrader
         }
         return $countryIdBucket;
       }
+
+      // -- Method calculates the number of correct quiz answers
 
       private function setNumAnswersCorrect() {
         $numAnswersCorrect = 0;
@@ -101,6 +111,8 @@ class QuizGrader
         return $numAnswersCorrect;
       }
 
+      // -- Method pulls down countries table data for use in the results blade file
+
       private function setCountryData() {
 
         $countryData = [];
@@ -113,9 +125,10 @@ class QuizGrader
           $countryData = array($retrievedRecord['name'], $retrievedRecord['capital']);
           array_push($countryDataBucket, $countryData);
       }
-        //  return $retrievedRecord;
         return $countryDataBucket;
     }
+
+      // -- Method to update the questions table with user answers
 
       private function addUserAnswers() {
 

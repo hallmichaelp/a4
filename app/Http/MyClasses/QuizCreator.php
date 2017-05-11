@@ -9,8 +9,6 @@ class QuizCreator
 
   // -- Class properties
 
-  // -- Setting these properties with data from the form
-
     private $difficulty;
     private $length;
     private $questionSetFull = [];
@@ -20,7 +18,7 @@ class QuizCreator
     private $quizId;
 
   // -- Class methods
-  // -- Getter method for retrieving the quiz
+  // -- Getter methods for retrieving class properties
 
     public function getQuestionSetFull() {
       return $this->questionSetFull;
@@ -66,7 +64,7 @@ class QuizCreator
     }
 
   // -- Constructor method to instantiate the object, set two properties,
-  // -- and call the class methods to generate the components of the quiz
+  // -- and call the class methods to generate the various components of the quiz
 
     public function __construct($inputDifficulty, $inputLength) {
       $this->difficulty = $this->setDifficultyLevel($inputDifficulty);
@@ -135,6 +133,9 @@ class QuizCreator
       shuffle($this->wrongAnswers);
       return $this->wrongAnswers;
     }
+
+    // -- Method to create an array with the answer choices - correct and three
+    // -- incorrect answers for populating the list controls
 
      private function createAnswerChoices() {
     // -- Looping through quiz question set and adding in three incorrect answers
